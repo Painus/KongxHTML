@@ -195,4 +195,57 @@ Lørdag: kl. 10.00-14.00
     .bg-1c3309{
         background-color: #1c3309;
     }
+      .bg-1c3309 > img{
+        padding: 40px;
+    }
+
+    #cart{
+        width: 200px;
+        height: fit-content;
+        border: solid 2px #c19c61
+    }
 </style>
+<script>
+    var pris = 0;
+
+    function AddToCart(){
+        var element = document.getElementById("Produkter");
+        var value = element.value;
+        var text = element.options[element.selectedIndex].text;
+
+        var item = document.createElement('li');
+        item.id = Math.floor(Math.random()* 1000000);
+        item.value = value
+        item.setAttribute("onclick", "RemoveItem("+ item.id +")");
+        item.classList.add('c19c61');
+        item.textContent = text;
+
+        var cart = document.getElementById('cart');
+        cart.appendChild(item);
+
+
+        pris += parseInt(value);
+        document.getElementById('pris').innerText = 'Pris: ' + pris+' kr.';
+    }
+
+    function RemoveItem(id){
+        var item = document.getElementById(id);
+        var value = item.value
+        pris -= parseInt(value);
+        document.getElementById('pris').innerText = 'Pris: '  + pris+' kr.';
+
+        item.remove();
+    }
+
+    function SendMail(){
+        var Items = "";
+        var children = document.getElementById('cart').children;
+        
+        for (let index = 0; index < children.length; index++) {
+            var element = children[index];
+            Items += element.innerText + "%0A"
+        }
+
+        window.location.href = "mailto:mail@kongchristian.dk?subject=Gavekurv&body="+ Items;
+    }
+</script>
