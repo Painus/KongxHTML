@@ -4,7 +4,7 @@
     <div class="container-fluid ">
         <!-- Navbar -->
         <div style="padding: 0;">
-            <img class="mt-2 p-0 position-absolute" src="/pics/logox.png" width="150" height="201">
+            <img class="mt-2 p-0 position-absolute" src="./pics/logox.png" width="150" height="201">
             <div class="row">
                 <div class="bg-1c3309 text-black text-center d-flex align-items-center " style="height: 25vh;">
                     <h1 class="col-12  m-7 text-decoration-underline c19c61" style="font-size:90px;">KongChristian X
@@ -17,7 +17,7 @@
         <!-- Forside info -->
         <div class="row">
             <div class="col">
-                <img class="rounded mx-auto d-block" src="pics/Image_7.png" width="350" height="auto">
+                <img class="rounded mx-auto d-block" src="./pics/Image_7.png" width="350" height="auto">
             </div>
             <div class="col  ">
                 <h2 class="c19c61 text-center text-decoration-underline ">Velkommen Til KongChristian X</h2>
@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="col">
-                <img class="rounded mx-auto d-block" src="pics/DSC03989.jpg" width="350" height="auto">
+                <img class="rounded mx-auto d-block" src="./pics/DSC03989.jpg" width="350" height="auto">
             </div>
         </div>
         <br>
@@ -41,37 +41,37 @@
             <h1 class="text-decoration-underline mb-4" style="font-size: 65px;">Produkter</h1>
             <h3 style="font-size: 50px;">Kaffe</h3>
             <div class="bg-1c3309">
-                <img src="/pics/No. 28 santos.jpg">
-                <img src="/pics/No. 20 mørk java.jpg">
-                <img src="/pics/No. 18 lys java.jpg">
-                <img src="/pics/gourmet kaffe.jpg">
+                <img src="./pics/No. 28 santos.jpg">
+                <img src="./pics/No. 20 mørk java.jpg">
+                <img src="./pics/No. 18 lys java.jpg">
+                <img src="./pics/gourmet kaffe.jpg">
             </div>
             <br>
             <br>
             <h3 style="font-size: 50px;">The</h3>
             <div class="bg-1c3309">
-                <img src="/pics/earl grey the.jpg">
-                <img src="/pics/marys the.jpg">
-                <img src="/pics/darjeeling the.jpg">
-                <img src="/pics/sønderjysk the.jpg">
+                <img src="./pics/earl grey the.jpg">
+                <img src="./pics/marys the.jpg">
+                <img src="./pics/darjeeling the.jpg">
+                <img src="./pics/sønderjysk the.jpg">
             </div>
             <br>
             <br>
             <h3 style="font-size: 50px;">Øl, Vin og Spiritus</h3>
             <div class="bg-1c3309">
-                <img src="/pics/norlyk gin.jpg">
-                <img src="/pics/marsk gin.jpg">
-                <img src="/pics/level gin.jpg">
-                <img src="/pics/skagen bryghus øl.jpg">
+                <img src="./pics/norlyk gin.jpg">
+                <img src="./pics/marsk gin.jpg">
+                <img src="./pics/level gin.jpg">
+                <img src="./pics/skagen bryghus øl.jpg">
             </div>
             <br>
             <br>
             <h3 style="font-size: 50px;">Interiør</h3>
             <div class="bg-1c3309">
-                <img src="/pics/Maileg nisser.jpg">
-                <img src="/pics/Maileg kaniner.jpg">
-                <img src="/pics/Maileg legehus.jpg">
-                <img src="/pics/maileg rensdyr.jpg">
+                <img src="./pics/Maileg nisser.jpg">
+                <img src="./pics/Maileg kaniner.jpg">
+                <img src="./pics/Maileg legehus.jpg">
+                <img src="./pics/maileg rensdyr.jpg">
             </div>
         </div>
         <br>
@@ -80,17 +80,17 @@
         <div class="row text-center bg-1c3309">
             <div class="mb-3">
                 <h1 class="c19c61 text-decoration-underline">Gavekurv</h1>
-                <img class="" width="335" height="335" src="/pics/gavekurv 7.jpg">
-                <img class="" width="335" height="335" src="/pics/gavekurv 6.jpg">
-                <img class="" width="335" height="335" src="/pics/gavekurv 5.jpg">
+                <img class="" width="335" height="335" src="./pics/gavekurv 7.jpg">
+                <img class="" width="335" height="335" src="./pics/gavekurv 6.jpg">
+                <img class="" width="335" height="335" src="./pics/gavekurv 5.jpg">
                 <br>
-                <img class="" width="335" height="335" src="/pics/gavekurv 4.jpg">
-                <img class="" width="335" height="335" src="/pics/gavekurv 3.jpg">
-                <img class="" width="335" height="335" src="/pics/gavekurv 2.jpg">
+                <img class="" width="335" height="335" src="./pics/gavekurv 4.jpg">
+                <img class="" width="335" height="335" src="./pics/gavekurv 3.jpg">
+                <img class="" width="335" height="335" src="./pics/gavekurv 2.jpg">
                 <br>
-                <img class="" width="335" height="335" src="/pics/gavekurv 1.jpg">
-                <img class="" width="335" height="335" src="/pics/gavekurv 9.jpg">
-                <img class="" width="335" height="335" src="/pics/gavekurv 8.jpg">
+                <img class="" width="335" height="335" src="./pics/gavekurv 1.jpg">
+                <img class="" width="335" height="335" src="./pics/gavekurv 9.jpg">
+                <img class="" width="335" height="335" src="./pics/gavekurv 8.jpg">
             </div>
             <h3 class="c19c61">Byg selv kurv</h3>
             <div class="col-3"></div>
@@ -231,43 +231,56 @@ Lørdag: kl. 10.00-14.00
     var pris = 0;
 
     function AddToCart() {
+        //here we get the dropdown from order section and save its properties in variables
         var element = document.getElementById("Produkter");
         var value = element.value;
         var text = element.options[element.selectedIndex].text;
 
+        //here we create a li element with the values we got from the dropdown
         var item = document.createElement('li');
+        //here we just qucikly generate a random id
         item.id = Math.floor(Math.random() * 1000000);
         item.value = value
-        item.setAttribute("onclick", "RemoveItem(" + item.id + ")");
         item.classList.add('c19c61');
         item.textContent = text;
+        //here we set it so you can click the item to remove it
+        item.setAttribute("onclick", "RemoveItem(" + item.id + ")");
 
+        //then we don't forget to acctualy append the element we just made to the "cart" div
         var cart = document.getElementById('cart');
         cart.appendChild(item);
 
 
+        //also we can't forget to update the price now that the new item is added :D
         pris += parseInt(value);
         document.getElementById('pris').innerText = 'Pris: ' + pris + ' kr.';
     }
 
     function RemoveItem(id) {
+        //first we find the element that was clicked 
+        //note: could maybe just have used the "this" keyword but this is easier to read for humans :D
         var item = document.getElementById(id);
         var value = item.value
+
+        //here we subtract to price of the element we remove from the full price
         pris -= parseInt(value);
         document.getElementById('pris').innerText = 'Pris: ' + pris + ' kr.';
 
+        //then we remember to remove to element from the document also :)
         item.remove();
     }
 
     function SendMail() {
         var Items = "";
+        //getting all children from the cart div
         var children = document.getElementById('cart').children;
 
+        //looping all the items and adding them with enter (%0A) to Items
         for (let index = 0; index < children.length; index++) {
             var element = children[index];
             Items += element.innerText + "%0A"
         }
-
+        //opens default mail program on users device and populates it with the Items :D
         window.location.href = "mailto:mail@kongchristian.dk?subject=Gavekurv&body=" + Items;
     }
 </script>
